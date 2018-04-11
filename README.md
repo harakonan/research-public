@@ -1,2 +1,2 @@
 # research-public
-Research manuscripts and codes (publicly available)
+Research manuscripts and codes which are publicly available.
