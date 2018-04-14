@@ -1,3 +1,6 @@
+# Ignore .DS_Store
+.DS_Store
+
 # Microsoft word temp file
 ~$*
 
@@ -71,7 +74,8 @@ rsconnect/
 *.bcf
 *.blg
 *-blx.aux
-*-blx.bib
+# deleted -blx
+*.bib
 *.run.xml
 
 ## Build tool auxiliary files:
