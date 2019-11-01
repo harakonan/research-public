@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
@@ -19,10 +19,11 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 \usepackage{harvard}
+\cfoot{\thepage}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-\sethintscolumntowidth{Documentation}
+\sethintscolumntowidth{04/19 -- present}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -31,8 +32,8 @@
 \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
 \address{7-3-1 Hongo, Bunkyo-ku}{Tokyo 113-0033}{Japan}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+81-90-8507-1062}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+81-3-5841-3303}
-\phone[fax]{+81-3-5841-3303}
+\phone[fixed]{+81-3-5841-5543}
+%\phone[fax]{+81-3-5841-3303}
 \email{hara.konan@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
@@ -64,12 +65,12 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2019}{Ph.D.}{Graduate School of Medicine, The University of Tokyo}{Japan (expected)}{}{}
+\cventry{2019}{Ph.D.}{Graduate School of Medicine, The University of Tokyo}{Japan}{}{}
 \cventry{2013}{M.D.}{Faculty of Medicine, The University of Tokyo}{Japan}{}{}  % arguments 3 to 6 can be left empty
 \cventry{2013}{B.A.}{Faculty of Medicine, The University of Tokyo}{Japan}{}{}
 
 \section{Research Interests}
-\cvlistitem{Applied Econometrics and Statistics (primary)}
+\cvlistitem{Econometrics}
 \cvlistitem{Biostatistics and Epidemiology}
 \cvlistitem{Health Economics}
 \cvlistitem{Behavioral Economics}
@@ -77,18 +78,32 @@
 \section{Qualification}
 \cvitem{2013}{Medical Doctor in Japan}
 
-\section{Research and Work Experience}
-\cvitem{Apr 2019 --\\}{Project Researcher for Hidehiko Ichimura, Graduate School of Economics, The University of Tokyo (scheduled)}
-\cvitem{Aug 2017 --\\Present}{Research Assistant for Hidehiko Ichimura, Graduate School of Economics, The University of Tokyo}
-\cvitem{Jul 2017 --\\Present}{Project Researcher for Yasuki Kobayashi, Graduate School of Medicine, The University of Tokyo}
-\cvitem{Feb 2017 --\\Mar 2017}{Research Assistant for Hajime Sato, National Institute of Public Health}
-\cvitem{Jul 2016 --\\Mar 2017}{Research Assistant for Yuichi Tei, Graduate School of Engineering, The University of Tokyo}
+\section{Appointments and Affiliations}
 
-\section{Non-Academic Positions}
-\cventry{Jul 2016 --\\Present}{Nephrologist}{Chiba Aiyukai Kinen Hospital}{Chiba}{Japan}{}
-\cventry{Jan 2016 --\\Jun 2016}{Nephrologist}{Ageo Central General Hospital}{Saitama}{Japan}{}
-\cventry{Apr 2015 --\\Dec 2015}{Physician}{Nishimura Heart Clinic}{Saitama}{Japan}{}
-\cventry{Apr 2013 --\\Mar 2015}{Resident}{University of Tokyo Hospital}{Tokyo}{Japan}{}
+\subsection{Academic Positions}
+\cventry{04/19 -- present}{Project Researcher}{Graduate School of Economics, The University of Tokyo}{Tokyo}{Japan}{}
+\cventry{04/19 -- present}{Part-time Researcher}{TXP Medical Co., Ltd.}{Tokyo}{Japan}{}
+\cventry{04/19 -- present}{Part-time Researcher}{Department of Hematology, Tokyo Metropolitan Cancer and Infectious Diseases Center Komagome Hospital}{Tokyo}{Japan}{}
+\cventry{07/17 -- 03/19}{Project Researcher}{Department of Health Policy, Graduate School of Medicine, The University of Tokyo}{Tokyo}{Japan}{}
+
+\subsection{Appointments at Hospitals}
+\cventry{07/16 -- present}{Nephrologist}{Chiba Aiyukai Kinen Hospital}{Chiba}{Japan}{}
+\cventry{01/16 -- 06/16}{Nephrologist}{Ageo Central General Hospital Eight Nine Clinic}{Saitama}{Japan}{}
+\cventry{04/15 -- 12/15}{Physician}{Nishimura Heart Clinic}{Saitama}{Japan}{}
+\cventry{04/14 -- 03/15}{Resident}{The University of Tokyo Hospital}{Tokyo}{Japan}{}
+\cventry{04/13 -- 03/14}{Resident}{The Fraternity Memorial Hospital}{Tokyo}{Japan}{}
+
+\section{Research Experience}
+\cvitem{08/17 -- 03/19}{Research Assistant for Hidehiko Ichimura, Graduate School of Economics, The University of Tokyo}
+\cvitem{02/17 -- 03/17}{Research Assistant for Hajime Sato, National Institute of Public Health}
+\cvitem{07/16 -- 03/17}{Research Assistant for Yuichi Tei, Graduate School of Engineering, The University of Tokyo}
+
+\section{Honors and Awards}
+\cvitem{2014}{Award of Excellence, Grand Round of Internal Medicine, The University of Tokyo Hospital}
+
+\section{Grants}
+\cvitem{2019}{Investigator, Elucidation of regulatory mechanisms for latent infection in progenitor cells and molecular mechanisms for virus reactivation along with cell differentiation (PI: Ayumi Taguchi), Japan Agency for Medical Research and Development (AMED)}
+\cvitem{2018}{Investigator, Self-Managing Healthy Society (PI: Yuichi Tei), Japan Science and Technology Agency (JST)}
 
 \section{Computer Skills}
 \cvcomputer{Data Science}{R, Python, Stata}{RDBMS}{Oracle SQL, MySQL}
@@ -101,7 +116,7 @@
 \section{Dissertation}
 \cvitem{Title}{\emph{Claims-based algorithms for common chronic conditions were investigated using regularly collected data in Japan}}
 \cvitem{Supervisor}{Yasuki Kobayashi}
-\cvitem{Description}{The literature of claims-based algorithm (CBA) has two features to be refined: the use of a chart review as a source of the gold standard; the procedure of searching for a fine-tuned CBA based on existing knowledge regarding the target condition. The first feature limits the population to which the CBA can be applied and the second makes the CBA construction procedure to be an overly complicated and cumbersome matter. Moreover, as the features discourage researchers from constructing and assessing CBAs, they lead to a slow establishment of acceptable CBAs, which can be a big issue as the codes recorded in the claims for transmitting information about patients are supposed to change periodically. The dissertation focuses on CBAs for identifying patients with three common chronic medical conditions, hypertension, diabetes, and dyslipidemia with health screening results as the gold standard, and (1) showed and compared the association measures of CBAs across a large and wide range of populations; (2) extensively probed statistical learning methods by which a CBA is fine-tuned regardless of the level of knowledge and without modification of the CBA construction procedure across different conditions; (3) proposed a course of action for an efficient CBA construction and assessment.}
+\cvitem{Description}{The literature of claims-based algorithm (CBA) has two features to be refined: the use of a chart review as a source of the gold standard; the procedure of searching for a fine-tuned CBA based on existing knowledge regarding target conditions. The first feature limits the population to which the CBA can be applied and the second makes the CBA construction procedure to be an overly complicated and cumbersome matter. Moreover, the burden of reviewing charts and searching for a fine-tuned CBA lead to a slow establishment of acceptable CBAs because it discourages researchers from CBA studies. The sluggish establishment of usable CBAs can be a big issue as the codes recorded in the claims for transmitting information about patients are supposed to change periodically. The dissertation focused on CBAs for identifying patients with three common chronic medical conditions, hypertension, diabetes, and dyslipidemia, and (1) demonstrated the usefulness of health screening results as the source of gold standard; (2) showed the power of statistical learning methods to develop an efficient CBA construction procedure; (3) proposed a course of action for an efficient CBA research. I believe that the series of techniques evaluated in the study should become essential in future CBA research.}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
@@ -118,6 +133,14 @@
 %\nocitemisc{misc1,misc2,misc3}
 %\bibliographystylemisc{plain}
 %\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\section{Working Papers}
+\cvitem{[1]}{Yuki Ito, Konan Hara, and Jun Tomio. Perception of Generic Drugs and Willingness-to-pay: A Survey-based Study. 2019.}
+\cvitem{[2]}{Takuya Shimizuguchi, Noritaka Sekiya, Konan Hara, Ayumi Taguchi, Yujiro Nakajima, Yu Miyake, Yukiko Shibata, Kentaro Taguchi, Hiroaki Ogawa, Kei Ito, Keiji Nihei, and Katsuyuki Karasawa. Radiation therapy and risk of herpes zoster in patients with cancer. 2019.}
+\cvitem{[3]}{Ayumi Taguchi, Konan Hara, Jun Tomio, Kei Kawana, Tomoki Tanaka, Satoshi Baba, Akira Kawata, Satoko Eguchi, Katsuyuki Adachi, Takeshi Nagamatsu, Katsutoshi Oda, Yutaka Osuga, and Tomoyuki Fujii. Application of a multistate Markov model to predict the prognosis of high-risk human papillomavirus-related cervical lesions. 2019.}
+\cvitem{[4]}{Satoshi Kaito, Yujiro Nakajima, Konan Hara, Takashi Toya, Tetsuya Nishida, Naoyuki Uchida, Takahiro Fukuda, Yukiyasu Ozawa, Heiwa Kanamori, Junya Kanda, Yoshiko Atsuta, Masao Ogata, Ayumi Taguchi, and Kazuteru Ohashi. Heterogeneous impact of cytomegalovirus reactivation on non-relapse mortality in hematopoietic stem cell transplantation. 2019. \emph{Revision Requested, Blood Advances}.}
+\cvitem{[5]}{Yuki Ito, Konan Hara, and Yasuki Kobayashi. The Effect of Inertia on Brand-name vs. Generic Drug Choice. 2019. \emph{Revision Requested 2nd Round, Journal of Economic Behavior and Organization}.}
+\cvitem{[6]}{Yuki Ito, Konan Hara, Byung-Kwang Yoo, Jun Tomio, and Yasuki Kobayashi. Can income-based co-payment rates improve disparity in access to brand-name drugs? Evidence from Japan’s elderly population. 2019. \emph{Forthcoming, BMC Health Services Research}.}
 
 \section{Conference Presentations}
 \cvitem{2017}{International Health Economics Association 12th World Congress; Japanese Society of Public Health Annual Meeting}
