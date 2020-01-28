@@ -1,4 +1,4 @@
-%% start of file `template.tex'.
+%% start of file
 %% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
@@ -31,9 +31,9 @@
 \name{Konan}{Hara}
 \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
 \address{7-3-1 Hongo, Bunkyo-ku}{Tokyo 113-0033}{Japan}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+81-90-8507-1062}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+81-3-5841-5543}
-%\phone[fax]{+81-3-5841-3303}
+\phone[mobile]{+81 90-8507-1062}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\phone[fixed]{+81 3-5841-5543}
+%\phone[fax]{+81 3-5841-3303}
 \email{hara.konan@gmail.com}                               % optional, remove / comment the line if not wanted
 %\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 %\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
@@ -48,14 +48,14 @@
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
 %   to show numerical labels in the bibliography (default is to show no labels)
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+% \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 %   to redefine the bibliography heading string ("Publications")
-%\renewcommand{\refname}{Articles}
+% \renewcommand{\refname}{Articles}
 
 % bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+\usepackage[resetlabels]{multibib}
+\newcites{eco,med}{{Economics},{Public Health and Clinical Research}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -64,8 +64,12 @@
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
+\section{Personal Information}
+\cvitem{Citizenship}{Japan}
+\cvitem{Language}{English (fluent), Japanese (native)}
+
 \section{Education}
-\cventry{2019}{Ph.D.}{Graduate School of Medicine, The University of Tokyo}{Japan}{}{}
+\cventry{2019}{Ph.D. in Medicine}{Graduate School of Medicine, The University of Tokyo}{Japan}{}{}
 \cventry{2013}{M.D.}{Faculty of Medicine, The University of Tokyo}{Japan}{}{}  % arguments 3 to 6 can be left empty
 \cventry{2013}{B.A.}{Faculty of Medicine, The University of Tokyo}{Japan}{}{}
 
@@ -73,7 +77,8 @@
 \cvlistitem{Econometrics}
 \cvlistitem{Biostatistics and Epidemiology}
 \cvlistitem{Health Economics}
-\cvlistitem{Behavioral Economics}
+\cvlistitem{Labor Economics}
+\cvlistitem{Public Finance}
 
 \section{Qualification}
 \cvitem{2013}{Medical Doctor in Japan}
@@ -81,10 +86,10 @@
 \section{Appointments and Affiliations}
 
 \subsection{Academic Positions}
-\cventry{04/19 -- present}{Project Researcher}{Graduate School of Economics, The University of Tokyo}{Tokyo}{Japan}{}
-\cventry{04/19 -- present}{Part-time Researcher}{TXP Medical Co., Ltd.}{Tokyo}{Japan}{}
-\cventry{04/19 -- present}{Part-time Researcher}{Department of Hematology, Tokyo Metropolitan Cancer and Infectious Diseases Center Komagome Hospital}{Tokyo}{Japan}{}
-\cventry{07/17 -- 03/19}{Project Researcher}{Department of Health Policy, Graduate School of Medicine, The University of Tokyo}{Tokyo}{Japan}{}
+\cventry{04/19 -- present}{Project Researcher}{Graduate School of Economics, The University of Tokyo}{Tokyo}{Japan}{I am in charge of management and analysis of highly confidential microdata that covers the entire population in Japan: the Japanese national medical claims data and the Japanese Census data. The data size is up to several terabytes with 40 billion records per table. My main work is to perform a longitudinal linkage of individuals for each data. MySQL, Oracle SQL, R, Python, and Bash are used for the projects.}
+\cventry{04/19 -- present}{Part-time Researcher}{TXP Medical Co., Ltd.}{Tokyo}{Japan}{I am working on a project to create a framework that enables efficient usage of electronic health records for clinical research purposes. R is used for the project.}
+\cventry{04/19 -- present}{Part-time Researcher}{Department of Hematology, Tokyo Metropolitan Cancer and Infectious Diseases Center Komagome Hospital}{Tokyo}{Japan}{I am working with clinical medicine specialists to apply statistical models that have rarely used in the domain but are considered to be useful theoretically to clinical data.}
+\cventry{07/17 -- 03/19}{Project Researcher}{Department of Health Policy, Graduate School of Medicine, The University of Tokyo}{Tokyo}{Japan}{Using the Japanese national medical claims data, I described the trend in the share of generic drugs for commonly-prescribed medicines from 2009 to 2015, stratified by various demographic groups. Oracle SQL with Oracle Exadata was used for the project.}
 
 \subsection{Appointments at Hospitals}
 \cventry{07/16 -- present}{Nephrologist}{Chiba Aiyukai Kinen Hospital}{Chiba}{Japan}{}
@@ -94,24 +99,15 @@
 \cventry{04/13 -- 03/14}{Resident}{The Fraternity Memorial Hospital}{Tokyo}{Japan}{}
 
 \section{Research Experience}
-\cvitem{08/17 -- 03/19}{Research Assistant for Hidehiko Ichimura, Graduate School of Economics, The University of Tokyo}
-\cvitem{02/17 -- 03/17}{Research Assistant for Hajime Sato, National Institute of Public Health}
-\cvitem{07/16 -- 03/17}{Research Assistant for Yuichi Tei, Graduate School of Engineering, The University of Tokyo}
+\cventry{08/17 -- 03/19}{Research Assistant for Hidehiko Ichimura}{Graduate School of Economics, The University of Tokyo}{}{}{I worked on a project to investigate the preventive effects of early consultation on the onset of fatal diseases through the improvement of lifestyle diseases using large-scale medical claims data and annual health checkup data. Microsoft SQL Server and R were used for the project.}
+\cventry{02/17 -- 03/17}{Research Assistant for Hajime Sato}{National Institute of Public Health}{}{}{I was engaged in the survey and summarization of the current state of clinical research regulations in Japan for the establishment of the clinical research law.}
+\cventry{07/16 -- 03/17}{Research Assistant for Yuichi Tei}{Graduate School of Engineering, The University of Tokyo}{}{}{As a data manager, I worked on anonymization, data cleaning, and data extraction of company labor management systems and annual health checkup data. R was used for the project.}
 
 \section{Honors and Awards}
-\cvitem{2014}{Award of Excellence, Grand Round of Internal Medicine, The University of Tokyo Hospital}
+\cventry{2014}{Award of Excellence}{Grand Round of Internal Medicine, The University of Tokyo Hospital}{}{}{}
 
 \section{Grants}
-\cvitem{2019}{Investigator, Elucidation of regulatory mechanisms for latent infection in progenitor cells and molecular mechanisms for virus reactivation along with cell differentiation (PI: Ayumi Taguchi), Japan Agency for Medical Research and Development (AMED)}
-\cvitem{2018}{Investigator, Self-Managing Healthy Society (PI: Yuichi Tei), Japan Science and Technology Agency (JST)}
-
-\section{Computer Skills}
-\cvcomputer{Data Science}{R, Python, Stata}{RDBMS}{Oracle SQL, MySQL}
-\cvcomputer{Documentation}{LaTeX, GFM, R markdown}{Others}{Unix}
-
-\section{Personal Information}
-\cvitem{Citizenship}{Japan}
-\cvitem{Language}{English (fluent), Japanese (native)}
+\cventry{2019}{Investigator}{Elucidation of regulatory mechanisms for latent infection in progenitor cells and molecular mechanisms for virus reactivation along with cell differentiation (PI: Ayumi Taguchi), Japan Agency for Medical Research and Development (AMED)}{}{}{We conducted two projects that explore the application of statistical models that have rarely used in the domain but are considered to be useful theoretically to clinical data: (1) we applied a statistical method for panel data from a semi-Markov process to predict the prognosis of cervical intraepithelial neoplasia according to the genotypes of high-risk human papillomavirus; (2) we applied survival analysis considering competing risks, time-dependent covariates, and interaction terms for exploring the heterogeneous impact of cytomegalovirus reactivation on non-relapse mortality in hematopoietic stem cell transplantation.}
 
 \section{Dissertation}
 \cvitem{Title}{\emph{Claims-based algorithms for common chronic conditions were investigated using regularly collected data in Japan}}
@@ -119,58 +115,66 @@
 \cvitem{Description}{The literature of claims-based algorithm (CBA) has two features to be refined: the use of a chart review as a source of the gold standard; the procedure of searching for a fine-tuned CBA based on existing knowledge regarding target conditions. The first feature limits the population to which the CBA can be applied and the second makes the CBA construction procedure to be an overly complicated and cumbersome matter. Moreover, the burden of reviewing charts and searching for a fine-tuned CBA lead to a slow establishment of acceptable CBAs because it discourages researchers from CBA studies. The sluggish establishment of usable CBAs can be a big issue as the codes recorded in the claims for transmitting information about patients are supposed to change periodically. The dissertation focused on CBAs for identifying patients with three common chronic medical conditions, hypertension, diabetes, and dyslipidemia, and (1) demonstrated the usefulness of health screening results as the source of gold standard; (2) showed the power of statistical learning methods to develop an efficient CBA construction procedure; (3) proposed a course of action for an efficient CBA research. I believe that the series of techniques evaluated in the study should become essential in future CBA research.}
 
 % Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file                 
+
+% update bbl file after the update of publications.bib
+% \nocite{Ito2019,Hara2018,Kinoshita2017} % comment out after creating bbl file
+% \bibliographystyle{unsrt}
+% \bibliography{publications}                       % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+% update publications.bib
+% update citations in \nociteeco and \nocitemed:
+% \nociteeco{Ito2020}
+% \nocitemed{Taguchi2020,Ito2019,Hara2018,Kinoshita2017}
+% update bbl file (compile this tex file)
+% comment out \nociteeco and \nocitemed
+% bibtex eco
+% bibtex med
+% compile this tex file again
+
+% 'publications' is the name of a BibTeX file
+\section{Publications}
+\bibliographystyleeco{unsrt}
+\bibliographyeco{publications}                   
+\bibliographystylemed{unsrt}
+\bibliographymed{publications}
 
 \section{Working Papers}
-\cvitem{[1]}{Yuki Ito, Konan Hara, and Jun Tomio. Perception of Generic Drugs and Willingness-to-pay: A Survey-based Study. 2019.}
-\cvitem{[2]}{Takuya Shimizuguchi, Noritaka Sekiya, Konan Hara, Ayumi Taguchi, Yujiro Nakajima, Yu Miyake, Yukiko Shibata, Kentaro Taguchi, Hiroaki Ogawa, Kei Ito, Keiji Nihei, and Katsuyuki Karasawa. Radiation therapy and risk of herpes zoster in patients with cancer. 2019.}
-\cvitem{[3]}{Ayumi Taguchi, Konan Hara, Jun Tomio, Kei Kawana, Tomoki Tanaka, Satoshi Baba, Akira Kawata, Satoko Eguchi, Katsuyuki Adachi, Takeshi Nagamatsu, Katsutoshi Oda, Yutaka Osuga, and Tomoyuki Fujii. Application of a multistate Markov model to predict the prognosis of high-risk human papillomavirus-related cervical lesions. 2019.}
-\cvitem{[4]}{Satoshi Kaito, Yujiro Nakajima, Konan Hara, Takashi Toya, Tetsuya Nishida, Naoyuki Uchida, Takahiro Fukuda, Yukiyasu Ozawa, Heiwa Kanamori, Junya Kanda, Yoshiko Atsuta, Masao Ogata, Ayumi Taguchi, and Kazuteru Ohashi. Heterogeneous impact of cytomegalovirus reactivation on non-relapse mortality in hematopoietic stem cell transplantation. 2019. \emph{Revision Requested, Blood Advances}.}
-\cvitem{[5]}{Yuki Ito, Konan Hara, and Yasuki Kobayashi. The Effect of Inertia on Brand-name vs. Generic Drug Choice. 2019. \emph{Revision Requested 2nd Round, Journal of Economic Behavior and Organization}.}
-\cvitem{[6]}{Yuki Ito, Konan Hara, Byung-Kwang Yoo, Jun Tomio, and Yasuki Kobayashi. Can income-based co-payment rates improve disparity in access to brand-name drugs? Evidence from Japan’s elderly population. 2019. \emph{Forthcoming, BMC Health Services Research}.}
+
+\subsection{Economics}
+\cvitem{}{NULL}
+
+\subsection{Public Health and Clinical Research}
+\cvitem{[1]}{Takuya Shimizuguchi, Noritaka Sekiya, Konan Hara, Ayumi Taguchi, Yujiro Nakajima, Yu Miyake, Yukiko Shibata, Kentaro Taguchi, Hiroaki Ogawa, Kei Ito, Keiji Nihei, and Katsuyuki Karasawa. Radiation therapy and risk of herpes zoster in patients with cancer. 2019. \emph{Revision Requested, Cancer}.}
+\cvitem{[2]}{Satoshi Kaito, Yujiro Nakajima, Konan Hara, Takashi Toya, Tetsuya Nishida, Naoyuki Uchida, Takahiro Fukuda, Yukiyasu Ozawa, Heiwa Kanamori, Junya Kanda, Yoshiko Atsuta, Masao Ogata, Ayumi Taguchi, and Kazuteru Ohashi. Heterogeneous impact of cytomegalovirus reactivation on non-relapse mortality in hematopoietic stem cell transplantation. 2019. \emph{Revision Requested, Blood Advances}.}
+
+\section{Work in Progress}
+
+\subsection{Economics}
+\cvitem{[1]}{Taiyo Fukai, Konan Hara, Hidehiko Ichimura, and Kyogo Kanazawa. Estimating the long-term transition of medical expenditures using the Japanese national claims database.}
+\cvitem{[2]}{Taiyo Fukai, Konan Hara, and Hidehiko Ichimura. What do we learn from Panel Data Created Using Japanese Census?}
+\cvitem{[3]}{Konan Hara, Hidehiko Ichimura, and Yuki Ito. Estimating the effect of early consultation on the onset of fatal diseases.}
+
+\subsection{Public Health and Clinical Research}
+\cvitem{[1]}{Konan Hara, Tomohiro Sonoo, and Toru Shirakawa. Development of an efficient gold standard construction procedure using phenotype algorithms for claims-based algorithms with machine learning methods.}
+\cvitem{[2]}{Konan Hara, Yasuki Kobayashi, Yuki Ito, Jun Tomio, Thomas Svensson, and Akiko Kishi Svensson. Development of an efficient claims-based algorithm construction procedure using machine learning methods.}
+\cvitem{[3]}{Yuki Ito, Konan Hara, and Jun Tomio. Perception of Generic Drugs and Willingness-to-pay: A Survey-based Study.}
+\cvitem{[4]}{Yuki Kosaka, Takehiro Sugiyama, Konan Hara, and Yasuki Kobayashi. Investigating the adherence to daily, weekly, and monthly bisphosphonates for women with postmenopausal osteoporosis using claims data in Japan.}
 
 \section{Conference Presentations}
+\cvitem{2019}{Annual Meeting of the Japanese Association for Acute Medicine}
 \cvitem{2017}{International Health Economics Association 12th World Congress; Japanese Society of Public Health Annual Meeting}
 \cvitem{2015}{Japanese Society of Public Health Annual Meeting}
 
+\section{Computer Skills}
+\cvitem{Data Science}{R (Advanced), Python (Intermediate), Stata (Novice)}
+\cvitem{RDBMS}{MySQL (Advanced), Oracle SQL (Intermediate), SQL Server (Novice)}
+\cvitem{DWH}{Oracle Exadata (Intermediate)}
+\cvitem{Documentation}{LaTeX (Advanced), GFM (Advanced), R markdown (Intermediate)}
+\cvitem{Others}{Zsh (Advanced), Bash (Advanced)}
+\cvitem{}{Advanced $=$ Regularly used, Intermediate $=$ Occasionally used, Novice $=$ Rarely used}
 
-% \clearpage
-% %-----       letter       ---------------------------------------------------------
-% % recipient data
-% \recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-% \date{January 01, 1984}
-% \opening{Dear Sir or Madam,}
-% \closing{Yours faithfully,}
-% \enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-% \makelettertitle
-
-% Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-% Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-% Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
-% Albert Einstein discovered that $e=mc^2$ in 1905.
-
-% \[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
-
-% \makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
-
-%% end of file `template.tex'.
+%% end of file
