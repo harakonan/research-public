@@ -1,0 +1,47 @@
+CREATE TABLE TNDS_T_RCP_DPC_RE
+(
+SEQ1_NO                      VARCHAR2 (10) NOT NULL ENABLE,
+SEQ2_NO                      VARCHAR2 (51) NOT NULL ENABLE,
+VLD_FLG                      NUMBER   (1,0),
+KO_FLG                       NUMBER   (1,0),
+REC_IDENT_INFO               VARCHAR2 (2),
+AGE                          NUMBER   (3,0),
+ID1                          VARCHAR2 (64),
+ID1N                         VARCHAR2 (64),
+ID2                          VARCHAR2 (64),
+RCP_NO                       NUMBER   (6,0),
+RCP_CLS                      VARCHAR2 (4),
+PRAC_YM                      VARCHAR2 (5),
+SEX_DIV                      VARCHAR2 (1),
+BIRTH_YM                     VARCHAR2 (5),
+PAY_RAT                      NUMBER   (3,0),
+HOSTZ_YMD                    VARCHAR2 (7),
+WARD_DIV                     VARCHAR2 (8),
+STAND_BURD_DIV               VARCHAR2 (1),
+RCPT_IMPTT_NOTI              VARCHAR2 (10),
+RESERVE_01                   VARCHAR2 (4),
+DISCNT_SCR_UNIT_PRICE        NUMBER   (2,0),
+RESERVE_02                   VARCHAR2 (1),
+RESERVE_03                   VARCHAR2 (1),
+INDI_PRAC_DEPT               VARCHAR2 (2),
+RCPT_GNRLZ_DIV               VARCHAR2 (1),
+DETL_INFO_NUM                NUMBER   (2,0),
+SRCH_NO                      VARCHAR2 (30),
+REC_CNDTN_SPEC_YM_INFO       VARCHAR2 (5),
+REQ_INFO                     NVARCHAR2(40),
+PRAC1_NAME                   VARCHAR2 (2),
+PRAC1_BODY_PART              VARCHAR2 (3),
+PRAC1_SEX                    VARCHAR2 (3),
+PRAC1_MEDI_TREAT             VARCHAR2 (3),
+PRAC1_SPCFC_DISE             VARCHAR2 (3),
+INPUT_YM                     VARCHAR2 (6),
+AGE_HIER_CD1                 VARCHAR2 (3),
+AGE_HIER_CD2                 VARCHAR2 (3),
+LAST_BIRTH_AGE               NUMBER   (3,0),
+LAST_BIRTH_AGE_HIER_CD1      VARCHAR2 (3),
+LAST_BIRTH_AGE_HIER_CD2      VARCHAR2 (3)
+)
+TABLESPACE NDB_USERS1
+NOLOGGING
+PARALLEL 30
+;

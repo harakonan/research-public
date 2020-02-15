@@ -1,0 +1,50 @@
+CREATE TABLE TNDS_M_MIC
+(
+TRT_YM_Y                     VARCHAR2 (4),
+TRT_YM_M                     VARCHAR2 (2),
+CRCT_DIV                     VARCHAR2 (1),
+MIC_TDFK_NO                  VARCHAR2 (2) NOT NULL ENABLE,
+MIC_SCORE_LIST_NO            VARCHAR2 (1) NOT NULL ENABLE,
+MIC_CITY_AREA_NO             VARCHAR2 (2) NOT NULL ENABLE,
+MIC_MIDI_INST_NO             VARCHAR2 (4) NOT NULL ENABLE,
+MIC_VFCT_NO                  VARCHAR2 (1) NOT NULL ENABLE,
+MIC_CHG_TDFK_NO              VARCHAR2 (2),
+MIC_CHG_SCORE_LIST_NO        VARCHAR2 (1),
+MIC_CHG_CITY_AREA_NO         VARCHAR2 (2),
+MIC_CHG_MIDI_INST_NO         VARCHAR2 (4),
+MIC_CHG_VFCT_NO              VARCHAR2 (1),
+NEW_YMD_ERA                  VARCHAR2 (1),
+NEW_YMD_Y                    VARCHAR2 (2),
+NEW_YMD_M                    VARCHAR2 (2),
+NEW_YMD_D                    VARCHAR2 (2),
+ABO_YMD_ERA                  VARCHAR2 (1),
+ABO_YMD_Y                    VARCHAR2 (2),
+ABO_YMD_M                    VARCHAR2 (2),
+ABO_YMD_D                    VARCHAR2 (2),
+CHG_YMD_ERA                  VARCHAR2 (1),
+CHG_YMD_Y                    VARCHAR2 (2),
+CHG_YMD_M                    VARCHAR2 (2),
+CHG_YMD_D                    VARCHAR2 (2),
+VCI_PBPV_DIV                 VARCHAR2 (1),
+VCI_HSPTL_DIV                VARCHAR2 (1),
+VCI_MNG_AGCY                 VARCHAR2 (5),
+VCI_PRAC_SJT                 VARCHAR2 (2),
+VCI_PRSPT                    VARCHAR2 (1),
+BED_CAPA_NUM                 NUMBER   (5,0),
+RESERVE_01                   VARCHAR2 (13),
+POST_NO                      VARCHAR2 (8),
+RESERVE_02                   VARCHAR2 (10),
+ADDR_KANA                    NVARCHAR2(54),
+ADDR_KANJ                    NVARCHAR2(60),
+CKTS_CD                      VARCHAR2 (5),
+SCND_MEDI_AREA_CD            VARCHAR2 (4),
+INPUT_YMD                    VARCHAR2 (8),
+APPL_YM                      VARCHAR2 (6),
+MST_GEN                      VARCHAR2 (9) NOT NULL ENABLE,
+    CONSTRAINT TNDS_M_MIC_PK PRIMARY KEY (MIC_TDFK_NO,MIC_SCORE_LIST_NO,MIC_CITY_AREA_NO,MIC_MIDI_INST_NO,MIC_VFCT_NO,MST_GEN) USING INDEX
+        TABLESPACE NDB_USERS1
+)
+TABLESPACE NDB_USERS1
+NOLOGGING
+PARALLEL 30
+;

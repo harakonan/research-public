@@ -1,0 +1,19 @@
+--調剤レセプトにいる個人は、医科レセプトでの外来受診のレコードが無いため、test用にTNDS_T_RCP_MED_SYに変数を追加
+--TNDS_T_RCP_PHA_REのtest用データを4列目までコピーし、5列目を'SY'に変更、6列目以降は、TNDS_T_RCP_MED_SYのtest用データの1行目をコピーした
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG009','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00F','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG006','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00A','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG003','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG002','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG005','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG008','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00D','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00G','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG004','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00H','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00C','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG001','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00E','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG007','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');
+INSERT INTO TNDS_T_RCP_MED_SY VALUES ('00003','GG7PJeG00B','1','0','SY','4659007','4280523','1',null,'0',null,null,'1','0',null,'42805','208711');

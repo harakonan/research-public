@@ -1,0 +1,22 @@
+-- TNDS_T_RCP_PHA_IYから必要な情報を抽出したTABLE TARGET_PHA_IY
+CREATE  TABLE   TARGET_PHA_IY(SEQ2_NO, PRSPT_NO, MEDICINE_CD, USE_AMNT)    AS
+SELECT
+    IY.SEQ2_NO
+,   IY.PRSPT_NO
+,   IY.MEDICINE_CD
+,   IY.USE_AMNT
+FROM
+    TNDS_T_RCP_PHA_IY   IY
+WHERE
+    IY.PRAC_YM  >=  &START_YM
+AND IY.PRAC_YM  <=  &END_YM
+AND IY.VLD_FLG     =   1
+AND EXISTS(
+        SELECT
+            *
+        FROM
+            TARGET_PHA_SEQ  TS
+        WHERE
+            TS.SEQ2_NO  =   IY.SEQ2_NO
+    )
+;

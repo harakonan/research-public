@@ -1,0 +1,27 @@
+-- 模擬申出書の別添9の上表に当たるクエリのTABLEを準備
+-- 医薬品別、年月別、都道府県別、年代別、男女別のジェネリック医薬品シェア
+CREATE TABLE SUMMARY_1 (
+      GENERIC_SHARE NUMBER
+    , MEDICINE_SHORT VARCHAR2(8)
+    , PRAC_YM VARCHAR2(5)
+    , TDFK VARCHAR2(2)
+    , AGE NUMBER(3,0)
+    , SEX_DIV VARCHAR2(1)
+    , TOTAL_AMNT NUMBER
+);
+ALTER TABLE SUMMARY_1 NOLOGGING;
+
+-- 模擬申出書の別添9の下表に当たるクエリのTABLEの準備
+-- 医薬品別、年月別、都道府県別、年代別、男女別、自己負担割合＋公費別のジェネリック医薬品シェア
+CREATE TABLE SUMMARY_2 (
+      GENERIC_SHARE NUMBER
+    , MEDICINE_SHORT VARCHAR2(8)
+    , PRAC_YM VARCHAR2(5)
+    , TDFK VARCHAR2(2)
+    , AGE NUMBER(3,0)
+    , SEX_DIV VARCHAR2(1)
+    , PUBFUND VARCHAR2(1)
+    , COSTSHARING VARCHAR(2)
+    , TOTAL_AMNT NUMBER
+);
+ALTER TABLE SUMMARY_2 NOLOGGING;

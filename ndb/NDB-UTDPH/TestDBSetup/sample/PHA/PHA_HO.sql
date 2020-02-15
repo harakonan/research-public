@@ -1,0 +1,17 @@
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG009','1','0','HO','06132013','06132013','x2wxvsst','2','5476',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00H','1','0','HO','06132013','06132013','x2wxvsst','2','592',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG006','1','0','HO','06132013','06132013','x2wxvsst','0','2325',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG003','1','0','HO','06132013','06132013','x2wxvsst','1','96',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG002','1','0','HO','06132013','06132013','x2wxvsst','1','1739',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00A','1','0','HO','06132013','06132013','x2wxvsst','1','376',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00D','1','0','HO','06132013','06132013','x2wxvsst','2','1739',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00G','1','0','HO','06132013','06132013','x2wxvsst','1','149',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG005','1','0','HO','06132013','06132013','x2wxvsst','1','1838',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG008','1','0','HO','06132013','06132013','x2wxvsst','2','1479',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG001','1','0','HO','06132013','06132013','x2wxvsst','5','3053',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00F','1','0','HO','06132013','06132013','x2wxvsst','2','414',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG004','1','0','HO','06132013','06132013','x2wxvsst','1','9370',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG007','1','0','HO','06132013','06132013','x2wxvsst','1','765',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00C','1','0','HO','06132013','06132013','x2wxvsst','2','1170',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00E','1','0','HO','06132013','06132013','x2wxvsst','1','4296',null,null,null,null,null,null,null,'42805','208711');
+INSERT INTO TNDS_T_RCP_PHA_HO VALUES ('00004','GG7PJeG00B','1','0','HO','06132013','06132013','x2wxvsst','1','765',null,null,null,null,null,null,null,'42805','208711');

@@ -1,0 +1,11 @@
+-- USER表領域の残り容量を確認する
+SELECT
+    TABLESPACE_NAME
+,   FILE_ID
+,   ROUND(NVL(SUM(BYTES), 0)    /   1024    /   1024, 1)    REMAIN_MB
+FROM
+    USER_FREE_SPACE
+GROUP BY
+    TABLESPACE_NAME
+,   FILE_ID
+;

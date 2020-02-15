@@ -1,0 +1,13 @@
+-- 外来での医科レセプトからの院内処方と調剤レセプトからの院外処方を抽出したデータを入れるTABLE IY_DATAを準備
+-- 1 tupleは処方箋/医薬品単位
+CREATE TABLE IY_DATA (
+    PRAC_YM VARCHAR2(5),
+    TDFK VARCHAR2(2),
+    AGE NUMBER(3,0),
+    RCP_CLS VARCHAR2(4),
+    SEX_DIV VARCHAR2(1),
+    MEDICINE_SHORT VARCHAR2(8),
+    GENERIC VARCHAR2(1),
+    AMOUNT NUMBER(10,5)
+);
+ALTER TABLE IY_DATA NOLOGGING;

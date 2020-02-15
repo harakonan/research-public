@@ -1,0 +1,45 @@
+CREATE TABLE TNDS_T_RCP_MED_NI
+(
+SEQ1_NO                      VARCHAR2 (10) NOT NULL ENABLE,
+SEQ2_NO                      VARCHAR2 (51) NOT NULL ENABLE,
+VLD_FLG                      NUMBER   (1,0),
+KO_FLG                       NUMBER   (1,0),
+REC_IDENT_INFO               VARCHAR2 (2),
+DAYS01_INFO                  NUMBER   (3,0),
+DAYS02_INFO                  NUMBER   (3,0),
+DAYS03_INFO                  NUMBER   (3,0),
+DAYS04_INFO                  NUMBER   (3,0),
+DAYS05_INFO                  NUMBER   (3,0),
+DAYS06_INFO                  NUMBER   (3,0),
+DAYS07_INFO                  NUMBER   (3,0),
+DAYS08_INFO                  NUMBER   (3,0),
+DAYS09_INFO                  NUMBER   (3,0),
+DAYS10_INFO                  NUMBER   (3,0),
+DAYS11_INFO                  NUMBER   (3,0),
+DAYS12_INFO                  NUMBER   (3,0),
+DAYS13_INFO                  NUMBER   (3,0),
+DAYS14_INFO                  NUMBER   (3,0),
+DAYS15_INFO                  NUMBER   (3,0),
+DAYS16_INFO                  NUMBER   (3,0),
+DAYS17_INFO                  NUMBER   (3,0),
+DAYS18_INFO                  NUMBER   (3,0),
+DAYS19_INFO                  NUMBER   (3,0),
+DAYS20_INFO                  NUMBER   (3,0),
+DAYS21_INFO                  NUMBER   (3,0),
+DAYS22_INFO                  NUMBER   (3,0),
+DAYS23_INFO                  NUMBER   (3,0),
+DAYS24_INFO                  NUMBER   (3,0),
+DAYS25_INFO                  NUMBER   (3,0),
+DAYS26_INFO                  NUMBER   (3,0),
+DAYS27_INFO                  NUMBER   (3,0),
+DAYS28_INFO                  NUMBER   (3,0),
+DAYS29_INFO                  NUMBER   (3,0),
+DAYS30_INFO                  NUMBER   (3,0),
+DAYS31_INFO                  NUMBER   (3,0),
+PRAC_YM                      VARCHAR2 (5),
+INPUT_YM                     VARCHAR2 (6)
+)
+TABLESPACE NDB_USERS1
+NOLOGGING
+PARALLEL 30
+;

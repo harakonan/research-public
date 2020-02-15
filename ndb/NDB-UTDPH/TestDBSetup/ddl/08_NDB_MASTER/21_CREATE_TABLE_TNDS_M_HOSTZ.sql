@@ -1,0 +1,20 @@
+CREATE TABLE TNDS_M_HOSTZ
+(
+MDC_CD                       VARCHAR2 (2) NOT NULL ENABLE,
+CLS_CD                       VARCHAR2 (4) NOT NULL ENABLE,
+HOSTZ_PPSE                   VARCHAR2 (1) NOT NULL ENABLE,
+CRSPD_TBL_CD                 VARCHAR2 (1),
+CHG_DIV                      VARCHAR2 (1),
+VALID_STR_YMD                VARCHAR2 (8),
+VALID_END_YMD                VARCHAR2 (8),
+UPD_YMD                      VARCHAR2 (8),
+INPUT_YMD                    VARCHAR2 (8),
+APPL_YM                      VARCHAR2 (6),
+MST_GEN                      VARCHAR2 (9) NOT NULL ENABLE,
+    CONSTRAINT TNDS_M_HOSTZ_PK PRIMARY KEY (MST_GEN,MDC_CD,CLS_CD,HOSTZ_PPSE) USING INDEX
+        TABLESPACE NDB_USERS1
+)
+TABLESPACE NDB_USERS1
+NOLOGGING
+PARALLEL 30
+;
