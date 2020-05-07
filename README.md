@@ -1,7 +1,7 @@
 # research-public
 Research manuscripts and codes which are publicly available.
 
-I am currently a Project Researcher at Graduate School of Economics, The University of Tokyo.
+I am currently a Project Researcher at the Department of Public Health, The University of Tokyo.
 [CV](https://github.com/harakonan/research-public/blob/master/CV/CV_KH.pdf)
 
 ## Contents
