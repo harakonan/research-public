@@ -1,4 +1,5 @@
 # cba
-Codes used in "Association measures of claims-based algorithms for common chronic conditions were assessed using regularly collected data in Japan" [[article]](https://doi.org/10.1016/j.jclinepi.2018.03.004)
+Codes used in research for claims-based algorithms (CBAs):
 
-Data: Medical and pharmacy claims data combined with annual health screening results were obtained from Japan Medical Data Center (JMDC).
+- `checkup/`: "Association measures of claims-based algorithms for common chronic conditions were assessed using regularly collected data in Japan" [[article]](https://doi.org/10.1016/j.jclinepi.2018.03.004)
+- `machine-learning/`: "Claims-based algorithms for common chronic conditions were efficiently constructed using machine learning methods" ***--- This article is currently under review, and codes are not yet publicly available. We have sent the codes that we plan to publish here to the journal we have submitted the article.***
