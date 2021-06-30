@@ -1,0 +1,18 @@
+%latex.default(convcba_asso_datacba, title = "", file = paste0(pathtotables,     target_disease, "conv.tex"), label = paste0("tab:", target_disease,     "conv"), cgroup = c("Sensitivity", "Specificity", "PPV",     "NPV"), n.cgroup = rep(3, 4), rgroup = c("Diagnostic code",     "Medication code", "Combined"), n.rgroup = n.rgroup, cgroupTexCmd = NULL,     rgroupTexCmd = NULL, rowname = rowname, col.just = c(rep("c",         12)), ctable = TRUE, caption = paste0(caption_lot, " (",         observation, ", ", prevalence, ")"), caption.lot = caption_lot,     landscape = T)%
+\ctable[caption={Association measures and their 95\% confidence intervals for claims-based algorithms derived from conventional methods according to diabetes (N = 38,092, Prevalence = 8.4\%)},cap={Association measures and their 95\% confidence intervals for claims-based algorithms derived from conventional methods according to diabetes},label=tab:dmconv,sideways]{lccccccccccccccc}{}{\FL
+\multicolumn{1}{l}{}&\multicolumn{3}{c}{Sensitivity}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{Specificity}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{PPV}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{NPV}\NN
+\cline{2-4} \cline{6-8} \cline{10-12} \cline{14-16}
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}\ML
+{Diagnostic code}&&&&&&&&&&&&&&&\NN
+~~Baseline&$90.8$&$89.8$&$91.8$&&$92.9$&$92.6$&$93.2$&&$53.8$&$52.5$&$55.2$&&$99.1$&$99.0$&$99.2$\NN
+~~Threshold = 2&$88.0$&$86.8$&$89.1$&&$94.3$&$94.1$&$94.5$&&$58.5$&$57.1$&$59.9$&&$98.9$&$98.7$&$99.0$\NN
+~~Threshold = 3&$86.3$&$85.0$&$87.5$&&$95.1$&$94.9$&$95.3$&&$61.6$&$60.2$&$63.0$&&$98.7$&$98.6$&$98.8$\ML
+{Medication code}&&&&&&&&&&&&&&&\NN
+~~Baseline&$79.3$&$77.8$&$80.6$&&$99.5$&$99.4$&$99.6$&&$93.5$&$92.5$&$94.4$&&$98.1$&$98.0$&$98.3$\NN
+~~Threshold = 2&$77.2$&$75.7$&$78.7$&&$99.6$&$99.6$&$99.7$&&$95.0$&$94.1$&$95.8$&&$98.0$&$97.8$&$98.1$\NN
+~~Threshold = 3&$75.8$&$74.2$&$77.2$&&$99.7$&$99.6$&$99.7$&&$95.5$&$94.6$&$96.3$&&$97.8$&$97.7$&$98.0$\ML
+{Combined}&&&&&&&&&&&&&&&\NN
+~~Baseline&$79.2$&$77.8$&$80.6$&&$99.6$&$99.5$&$99.6$&&$94.6$&$93.6$&$95.4$&&$98.1$&$98.0$&$98.3$\NN
+~~Threshold = 2&$77.2$&$75.7$&$78.6$&&$99.6$&$99.6$&$99.7$&&$95.2$&$94.3$&$96.0$&&$98.0$&$97.8$&$98.1$\NN
+~~Threshold = 3&$75.7$&$74.2$&$77.2$&&$99.7$&$99.6$&$99.7$&&$95.6$&$94.7$&$96.4$&&$97.8$&$97.7$&$98.0$\LL
+}

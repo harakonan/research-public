@@ -1,0 +1,17 @@
+%latex.default(summaryncs_mat, title = "", file = paste0(pathtotables,     "summaryncs.tex"), label = paste0("tab:", "summaryncs"),     cgroup = c("ICD-10 code", "WHO-ATC code"), n.cgroup = c(2,         2), cgroupTexCmd = NULL, rgroupTexCmd = NULL, col.just = c(rep("r",         4)), ctable = TRUE, caption = "Cumulative distribution of the proportion of enrollees whose claims contain the ICD-10/WHO-ATC code at least once in the baseline study population",     landscape = FALSE)%
+\ctable[caption={Cumulative distribution of the proportion of enrollees whose claims contain the ICD-10/WHO-ATC code at least once in the baseline study population},label=tab:summaryncs,pos=!tbp,]{lrrcrr}{}{\FL
+\multicolumn{1}{l}{}&\multicolumn{2}{c}{ICD-10 code}&\multicolumn{1}{c}{}&\multicolumn{2}{c}{WHO-ATC code}\NN
+\cline{2-3} \cline{5-6}
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{Count}&\multicolumn{1}{c}{Percentile}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{Count}&\multicolumn{1}{c}{Percentile}\ML
+$\leq$ 0.01\%& 485&36.4\%&& 5&5.4\%\NN
+$\leq$ 0.1\%& 879&65.9\%&&12&13.0\%\NN
+$\leq$ 1\%&1195&89.6\%&&32&34.8\%\NN
+$\leq$ 2\%&1254&94.1\%&&39&42.4\%\NN
+$\leq$ 3\%&1277&95.8\%&&45&48.9\%\NN
+$\leq$ 5\%&1302&97.7\%&&49&53.3\%\NN
+$\leq$ 10\%&1318&98.9\%&&69&75.0\%\NN
+$\leq$ 20\%&1326&99.5\%&&80&87.0\%\NN
+$\leq$ 30\%&1331&99.8\%&&86&93.5\%\NN
+$\leq$ 50\%&1333&100.0\%&&91&98.9\%\NN
+$\leq$ 100\%&1333&100.0\%&&92&100.0\%\LL
+}

@@ -1,0 +1,24 @@
+%latex.default(convcba_asso_datasa, title = "", file = paste0(pathtotables,     target_disease, "convsa.tex"), label = paste0("tab:", target_disease,     "convsa"), cgroup = c("", "", "Sensitivity", "Specificity",     "PPV", "NPV"), n.cgroup = c(1, 1, rep(3, 4)), rgroup = c("Diagnostic code",     "Medication code", "Combined"), n.rgroup = rep(5, 3), cgroupTexCmd = NULL,     rgroupTexCmd = NULL, rowname = rowname, col.just = c("r",         rep("c", 13)), ctable = TRUE, caption = paste0("Sensitivity analysis for the association measures of baseline claims-based algorithm according to ",         disease_name), landscape = T)%
+\ctable[caption={Sensitivity analysis for the association measures of baseline claims-based algorithm according to hypertension},label=tab:htconvsa,sideways]{lrcccccccccccccccccc}{}{\FL
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{Sensitivity}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{Specificity}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{PPV}&\multicolumn{1}{c}{}&\multicolumn{3}{c}{NPV}\NN
+\cline{6-8} \cline{10-12} \cline{14-16} \cline{18-20}
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{N}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{Prev. \%}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{\%}&\multicolumn{1}{c}{95\% CI}&\multicolumn{1}{c}{95\% CI}\ML
+{Diagnostic code}&&&&&&&&&&&&&&&&&&&\NN
+~~Baseline&157,822&&$25.4$&&$80.7$&$80.3$&$81.1$&&$95.2$&$95.0$&$95.3$&&$85.0$&$84.6$&$85.4$&&$93.6$&$93.4$&$93.7$\NN
+~~Population: clinic/hospital&200,687&&$22.3$&&$76.6$&$76.2$&$77.0$&&$96.1$&$96.0$&$96.2$&&$84.9$&$84.6$&$85.3$&&$93.4$&$93.3$&$93.6$\NN
+~~Population: all&236,009&&$20.4$&&$71.2$&$70.8$&$71.6$&&$96.8$&$96.7$&$96.8$&&$84.9$&$84.6$&$85.3$&&$92.9$&$92.8$&$93.0$\NN
+~~Population: age $\geq$ 50 years&77,213&&$39.4$&&$84.3$&$83.9$&$84.7$&&$91.9$&$91.7$&$92.2$&&$87.1$&$86.8$&$87.5$&&$90.0$&$89.7$&$90.3$\NN
+~~Alternative gold standard&157,822&&$34.0$&&$64.1$&$63.7$&$64.5$&&$96.5$&$96.4$&$96.7$&&$90.5$&$90.2$&$90.8$&&$83.9$&$83.7$&$84.1$\ML
+{Medication code}&&&&&&&&&&&&&&&&&&&\NN
+~~Baseline&157,822&&$25.4$&&$75.3$&$74.9$&$75.7$&&$97.8$&$97.7$&$97.9$&&$92.0$&$91.7$&$92.3$&&$92.1$&$91.9$&$92.2$\NN
+~~Population: clinic/hospital&200,687&&$22.3$&&$71.4$&$71.0$&$71.8$&&$98.2$&$98.1$&$98.3$&&$91.9$&$91.7$&$92.2$&&$92.3$&$92.1$&$92.4$\NN
+~~Population: all&236,009&&$20.4$&&$66.4$&$66.0$&$66.8$&&$98.5$&$98.5$&$98.6$&&$91.9$&$91.7$&$92.2$&&$91.9$&$91.8$&$92.1$\NN
+~~Population: age $\geq$ 50 years&77,213&&$39.4$&&$79.3$&$78.8$&$79.7$&&$96.1$&$95.9$&$96.2$&&$92.9$&$92.6$&$93.2$&&$87.7$&$87.4$&$88.0$\NN
+~~Alternative gold standard&157,822&&$34.0$&&$58.1$&$57.7$&$58.6$&&$98.5$&$98.4$&$98.6$&&$95.2$&$95.0$&$95.4$&&$82.1$&$81.8$&$82.3$\ML
+{Combined}&&&&&&&&&&&&&&&&&&&\NN
+~~Baseline&157,822&&$25.4$&&$74.8$&$74.4$&$75.3$&&$98.1$&$98.0$&$98.2$&&$93.1$&$92.8$&$93.4$&&$92.0$&$91.8$&$92.1$\NN
+~~Population: clinic/hospital&200,687&&$22.3$&&$71.0$&$70.6$&$71.4$&&$98.5$&$98.4$&$98.5$&&$93.1$&$92.8$&$93.4$&&$92.2$&$92.1$&$92.3$\NN
+~~Population: all&236,009&&$20.4$&&$66.0$&$65.6$&$66.4$&&$98.7$&$98.7$&$98.8$&&$93.1$&$92.8$&$93.4$&&$91.9$&$91.8$&$92.0$\NN
+~~Population: age $\geq$ 50 years&77,213&&$39.4$&&$78.8$&$78.3$&$79.3$&&$96.7$&$96.5$&$96.8$&&$93.9$&$93.6$&$94.2$&&$87.5$&$87.2$&$87.8$\NN
+~~Alternative gold standard&157,822&&$34.0$&&$57.7$&$57.2$&$58.1$&&$98.8$&$98.7$&$98.9$&&$96.2$&$95.9$&$96.4$&&$81.9$&$81.7$&$82.1$\LL
+}

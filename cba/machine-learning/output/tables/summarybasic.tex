@@ -1,0 +1,26 @@
+%latex.default(summarybasic_mat, title = "", file = paste0(pathtotables,     "summarybasic.tex"), label = paste0("tab:", "summarybasic"),     cgroup = c(paste0("FY", fyclaim - 1), paste0("FY", fyclaim)),     n.cgroup = c(2, 2), rgroup = c("Demographics", "Visited clinic/hospital",         "Health screening results", "Self-report of taking drug"),     n.rgroup = c(2, 2, 8, 3), cgroupTexCmd = NULL, rgroupTexCmd = NULL,     col.just = c(rep("D{.}{.}{2}", 4)), dcolumn = TRUE, ctable = TRUE,     caption = "Summary statistics of enrollees' characteristics and health screening results for each fiscal year",     landscape = FALSE)%
+\newcolumntype{.}{D{.}{.}{-1}}
+\ctable[caption={Summary statistics of enrollees' characteristics and health screening results for each fiscal year},label=tab:summarybasic,pos=!tbp,]{lD{.}{.}{2}D{.}{.}{2}cD{.}{.}{2}D{.}{.}{2}}{}{\FL
+\multicolumn{1}{l}{}&\multicolumn{2}{c}{FY2016}&\multicolumn{1}{c}{}&\multicolumn{2}{c}{FY2017}\NN
+\cline{2-3} \cline{5-6}
+\multicolumn{1}{l}{}&\multicolumn{1}{c}{Mean}&\multicolumn{1}{c}{SD}&\multicolumn{1}{c}{}&\multicolumn{1}{c}{Mean}&\multicolumn{1}{c}{SD}\ML
+{Demographics}&&&&&\NN
+~~Male&-&-&&0.80&-\NN
+~~Age (year)&-&-&&48.0&10.4\ML
+{Visited clinic/hospital}&&&&&\NN
+~~Any clinic/hospital&0.85&-&&0.85&-\NN
+~~Primary care clinic/hospital&0.67&-&&0.67&-\ML
+{Health screening results}&&&&&\NN
+~~Fasting time $\geq$ 10 hours&0.81&-&&0.81&-\NN
+~~Systolic blood pressure (mmHg)&121.5&15.8&&122.1&15.9\NN
+~~Diastolic blood pressure (mmHg)&75.5&11.7&&75.9&11.8\NN
+~~Fasting blood glucose (mg/dL)&96.7&18.5&&97.3&19.0\NN
+~~Hemoglobin A1c (\%)&5.56&0.64&&5.59&0.64\NN
+~~Low-density lipoprotein cholesterol (mg/dL)&121.1&30.8&&121.3&30.6\NN
+~~High-density lipoprotein cholesterol (mg/dL)&60.6&15.9&&60.9&16.1\NN
+~~Triglyceride (mg/dL)&117.1&94.0&&118.3&94.5\ML
+{Self-report of taking drug}&&&&&\NN
+~~Blood-pressure-lowering drugs&0.12&-&&0.13&-\NN
+~~Hypoglycemic drugs&0.04&-&&0.04&-\NN
+~~Lipid-lowering drugs&0.07&-&&0.08&-\LL
+}
