@@ -1,7 +1,7 @@
 # research-public
 Research manuscripts and codes which are publicly available.
 
-I am currently a Project Researcher at the Department of Public Health, The University of Tokyo.
+I am a Ph.D. student at the Department of Economics, University of Arizona. I have earned M.D. and Ph.D. in Medicine (Public Health Major) at The University of Tokyo.
 [CV](https://github.com/harakonan/research-public/blob/master/CV/CV_KH.pdf)
 
 ## Contents
