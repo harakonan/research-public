@@ -1,5 +1,5 @@
 # cba/machine-learning
-Codes used in "Claims-based algorithms for common chronic conditions were efficiently constructed using machine learning methods" (***Accepted at PLOS ONE***) and "Ph.D. Thesis Claims-based algorithms for common chronic conditions were investigated using regularly collected data in Japan."
+Codes used in "Claims-based algorithms for common chronic conditions were efficiently constructed using machine learning methods" [[article]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0254394) and "Ph.D. Thesis Claims-based algorithms for common chronic conditions were investigated using regularly collected data in Japan."
 
 - `codes/`: codes used in this study
 - `output/`: output from the codes
