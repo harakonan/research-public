@@ -824,11 +824,12 @@
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Introduction}
+	\frametitle{Markov model for HPV-related CIN prognosis}
 	\begin{itemize}
 	\item Investigated the prognosis of hrHPV-related cervical lesions.
+	\item Cox proportional hazards model is most frequently used to predict the risk of transition from one state to another.
 	\item CIN has a natural history of bidirectional transition between different states.
-	\item Cox models assuming a unidirectional disease progression may oversimplify CIN fate.
+	\item Cox models assuming a unidirectional disease progression oversimplify CIN fate.
 	\item Application of continuous-time Markov model to this situation may be of interest.
 
 	\end{itemize}
@@ -856,14 +857,17 @@
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Continuous-Time Markov Model}
+	\frametitle{Continuous-time Markov Model}
 	\begin{itemize}
 	\item Parameterization of the hazard function:
 	\begin{eqnarray*}
 	\lambda_{rr'} (t, \text{HPV}) = \lambda_{rr'0}^{\text{HPV}}
 	\end{eqnarray*}
+	\vspace*{-20pt}
+	\begin{itemize}
 	\item Hazards were assumed to be constant across time.
 	\item Hazards were estimated for each HPV category.
+	\end{itemize}
 	\item It was challenging to find a parameterization where the estimation converges.
 
 	\end{itemize}
@@ -883,7 +887,103 @@
 	}
 	\end{frame}
 
+	\begin{frame}
+	\frametitle{Ikesu et al. (2021, Cancer Medicine)}
+	\centering{
+	\includegraphics[width=\textwidth]{fig/Ikesu_et_al_title.png}
+	}
+	\end{frame}
 
+	\begin{frame}
+	\frametitle{Misclassification concern in CIN diagnosis}
+	\begin{itemize}
+	\item A continuous-time multistate Markov model was also applied to accommodate the bidirectional feature of CIN lesions.
+	\item However, another concern when building structural models of CIN lesion prognosis is diagnostic misclassification.
+	\item Although CIN diagnosis is based on the combination of cytological and histological examinations aided by colposcopy, the accuracy of CIN diagnosis is limited, resulting in the misclassification of the ``true'' pathology of the lesion.
+	\item Nevertheless, few studies have evaluated HPV pathogenesis, accounting for the probability of diagnostic misclassification.
+
+	\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Hidden Markov model}
+	\begin{itemize}
+	\item To accommodate these types of measurement challenges, various latent variable models (e.g., factor models and structural equation models) have been adopted in medical research.
+	\item Latent variable models can manage unobserved random variables.
+	\item Recently, another latent variable model, a hidden Markov model, was applied to model 
+	\begin{enumerate}
+	\item the transition between the (unobserved) ``true'' states
+	\item the probabilities of the ``observed'' state conditional on the ``true'' states (misclassification probabilities).
+	\end{enumerate}
+	\item Hidden Markov models have been applied in clinical settings with measurement challenges, such as frailty, HIV infection, and diabetic retinopathy.
+
+	\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Hidden Markov model for HPV-related CIN prognosis}
+	\begin{itemize}
+	\item We applied a hidden Markov model to our cohort of HPV-infected patients to clarify the natural course of CIN according to HPV genotype, which accounted for the misclassification probability.
+	\item We aimed to confirm the robustness of the current literature, including a previous study that used a Markov model, on the CIN characteristics according to HPV genotype.
+	\item We also quantified the misclassification probability in CIN diagnosis.
+
+	\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Continuous-time hidden Markov model}
+	\centering{
+	\includegraphics[width=\textwidth]{fig/Ikesu_et_al_Fig2.png}
+	}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Continuous-time hidden Markov model}
+	\begin{itemize}
+	\item Parameterization of the hazard function:
+	\begin{eqnarray*}
+	\lambda_{rr'} (t, \text{HPV}) = \lambda_{rr'0}^{\text{HPV}}
+	\end{eqnarray*}
+	\vspace*{-20pt}
+	\begin{itemize}
+	\item Hazards were assumed to be constant across time.
+	\item Dummy variables representing each HPV genotype were included in the model as covariates.
+	\end{itemize}
+	\item Based on the clinical assumption that adjacent misclassifications could account for most diagnostic misclassifications, we allowed for a ``one-step'' misclassification adjacent to the true state.
+	\item ``True'' initial distribution was also estimated in the models.
+	\item It was challenging to find a parameterization where the estimation converges.
+
+	\end{itemize}
+
+
+	\end{frame}
+
+	\begin{frame}
+	\centering{
+	\includegraphics[width=0.95\textwidth]{fig/Ikesu_et_al_Fig1.png}
+	}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Misclassification probabilities}
+	\centering{
+	\includegraphics[width=\textwidth]{fig/Ikesu_et_al_Tab3.png}
+	}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Predicted 2-year transition probabilities}
+	\centering{
+	\includegraphics[width=0.85\textwidth]{fig/Ikesu_et_al_Tab4.png}
+	}
+	\end{frame}
+
+	\begin{frame}
+	\frametitle{Observed and simulated prevalence}
+	\centering{
+	\includegraphics[width=13cm]{fig/Ikesu_et_al_FigS3.png}
+	}
+	\end{frame}
 
 
 
