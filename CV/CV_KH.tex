@@ -55,7 +55,7 @@
 
 % bibliography with mutiple entries
 \usepackage[resetlabels]{multibib}
-\newcites{eco,med}{{Economics},{Public Health and Clinical Research}}
+\newcites{eco,medpri,medoth}{{Economics},{Public Health and Clinical Research (First/Corresponding Author)},{Public Health and Clinical Research (Others)}}
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
@@ -104,22 +104,23 @@
 \cventry{04/13 -- 03/14}{Intern}{}{The Fraternity Memorial Hospital}{Tokyo, Japan}{}
 
 \section{Research Experience}
-\cventry{08/21 -- }{Research Assistant for Ashley Langer}{}{University of Arizona}{}{Funded by: Carbon Mapper} %confirm funding source
+\cventry{08/21 -- }{Research Assistant for Ashley Langer and Derek Lemoine}{}{University of Arizona}{}{Funded by: Carbon Mapper and NSF grant (***)} %confirm funding source
 \cventry{01/21 -- 07/21}{Research Assistant for Gautam Gowrisankaran}{}{University of Arizona}{}{Funded by: NSF grant (SES-1824348)}
 \cventry{08/17 -- 03/19}{Research Assistant for Hidehiko Ichimura}{Graduate School of Economics}{The University of Tokyo}{}{Funded by: Japan Society for the Promotion of Science KAKENHI (15H05692)}%\\I worked on a project to investigate the preventive effects of early consultation on the onset of fatal diseases through the improvement of lifestyle diseases using large-scale medical claims data and annual health checkup data. Microsoft SQL Server and R were used for the project.}
 \cventry{02/17 -- 03/17}{Research Assistant for Hajime Sato}{}{National Institute of Public Health}{}{Funded by: Japanese Ministry of Health, Labour and Welfare (H29-tokubetsu-shitei-035)}%\\I was engaged in the survey and summarization of the current state of clinical research regulations in Japan for the establishment of the clinical research law.}
 \cventry{07/16 -- 03/17}{Research Assistant for Yuichi Tei}{Graduate School of Engineering}{The University of Tokyo}{}{Funded by: Japan Science and Technology Agency (JPMJCE1304)}%\\As a data manager, I worked on anonymization, data cleaning, and data extraction of company labor management systems and annual health checkup data. R was used for the project.}
 
 \section{Teaching Experience}
+\cventry{Spring 2022}{Teaching Assistant for Hidehiko Ichimura}{}{University of Arizona}{}{ECON 522A: Econometrics for 1st-year PhD students (core)}
 \cventry{Fall 2021}{Teaching Assistant for Tiemen Woutersen}{}{University of Arizona}{}{ECON 522B: Econometrics for 2nd-year PhD students (core)}
 \cventry{Spring 2021}{Teaching Assistant for Juan Pantano}{}{University of Arizona}{}{ECON 422: Health Economics for advanced undergraduate students}
 
 
 \section{Honors and Awards}
 \cventry{2021}{Steve Manos Prize}{}{University of Arizona}{}{Best 2nd-year paper award}
-\cventry{2021}{Eller Graduate General Scholarship}{}{University of Arizona}{}{}
+\cventry{2021}{Eller Graduate General Scholarship}{}{University of Arizona}{}{Award of excellence for 2nd-year class performance}
 \cventry{2021 -- 2023}{Rotary Foundation District Grant Scholarship}{}{Rotary International District 2580, Rotary Foundation}{}{}
-\cventry{2014}{Award of Excellence}{Grand Round of Internal Medicine}{The University of Tokyo Hospital}{}{}
+\cventry{2014}{Award of Excellence}{Internal Medicine Lecture Series for Interns}{The University of Tokyo Hospital}{}{}
 
 \section{Research Grants}
 \cventry{2019}{Investigator}{Elucidation of regulatory mechanisms for latent infection in progenitor cells and molecular mechanisms for virus reactivation along with cell differentiation (PI: Ayumi Taguchi)}{Japan Agency for Medical Research and Development (AMED)}{}{}%{We conducted two projects that explore the application of statistical models that have rarely used in the domain but are considered to be useful theoretically to clinical data: (1) we applied a statistical method for panel data from a semi-Markov process to predict the prognosis of cervical intraepithelial neoplasia according to the genotypes of high-risk human papillomavirus; (2) we applied survival analysis considering competing risks, time-dependent covariates, and interaction terms for exploring the heterogeneous impact of cytomegalovirus reactivation on non-relapse mortality in hematopoietic stem cell transplantation.}
@@ -142,7 +143,8 @@
 % update publications.bib
 % update citations in \nociteeco and \nocitemed by activating the following two lines:
 % \nociteeco{Ito2020}
-% \nocitemed{Hara2021,Ito2021,Osawa2021,Fukaguchi2021,Soeno2021,Goto2020,Kinoshita2020,Shimizuguchi2020,Kaito2020,Baba2020,Taguchi2020b,Taguchi2020a,Ito2019,Hara2018,Kinoshita2017}
+% \nocitemedpri{Ikesu2021,Hara2021,Hara2018}
+% \nocitemedoth{Kosaka2021,Ito2021,Osawa2021,Fukaguchi2021,Soeno2021,Goto2020,Kinoshita2020,Shimizuguchi2020,Kaito2020,Baba2020,Taguchi2020b,Taguchi2020a,Ito2019,Kinoshita2017}
 % update bbl file (compile this tex file)
 % comment out \nociteeco and \nocitemed
 % ./prepare_bbl.sh
@@ -152,8 +154,10 @@
 \section{Publications}
 \bibliographystyleeco{unsrt}
 \bibliographyeco{publications}                   
-\bibliographystylemed{unsrt}
-\bibliographymed{publications}
+\bibliographystylemedpri{unsrt}
+\bibliographymedpri{publications}
+\bibliographystylemedoth{unsrt}
+\bibliographymedoth{publications}
 
 \section{Conference Presentations}
 \cvitem{2020}{Machine Learning for Healthcare}

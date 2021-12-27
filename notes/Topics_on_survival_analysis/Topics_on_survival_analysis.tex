@@ -1,22 +1,68 @@
-\documentclass[14pt]{beamer}
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[authordate,maxcitenames=1,backend=biber,doi=false,isbn=false,url=false]{biblatex-chicago}
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
+% \addbibresource{discrimination.bib}
 
 \usepackage{amsmath}
-\usepackage{bbm}
+\usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{bm}
-\usepackage{graphics}
-\usepackage{type1cm}
+\usepackage{bbm}
 \usepackage{mathtools}
+\setbeamertemplate{theorems}[numbered]
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
 
-\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\plim}{plim}
+\DeclareMathOperator*{\var}{var}
+\DeclareMathOperator*{\cov}{cov}
+
 \newcommand{\indep}{\perp \!\!\! \perp}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbbm{1}}
+\newcommand{\argmax}{\mathop{\rm arg~max}\limits}
+\newcommand{\argmin}{\mathop{\rm arg~min}\limits}
+
+% preambles for tables
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{caption}
+\captionsetup{labelformat=empty}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+\newcommand{\DrawBox}[1][]{%
+    \tikz[overlay,remember picture]{
+    \draw[#1,thick]
+      ($(left)+(-0.2em,0.9em)$) rectangle
+      ($(right)+(0.2em,-0.3em)$);}
+}
+\usepackage[group-separator={,}]{siunitx}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{threeparttable}
+
+\newcommand{\backupbegin}{
+   \newcounter{framenumberappendix}
+   \setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+
+\usepackage{silence}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{biblatex}{Patching footnotes failed}
 
 \usetheme{Boadilla}
 \usecolortheme{orchid}
 \usefonttheme{professionalfonts}
-
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{blocks}[rounded][shadow=false]
-\setbeamercolor{alartblock}{fg=red}
 
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{itemize item}[default]
@@ -27,10 +73,13 @@
 \setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}
 \setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}
 \setbeamerfont{title}{size=\large}
+\setbeamerfont{institute}{size=\small}
+\setbeamercovered{dynamic}
+
 
 \title[Survival analysis]{Topics on survival analysis}
-\author[K.Hara]{Konan Hara}
-\institute[Univ. of Tokyo]{Department of Public Health\\University of Tokyo}
+\author[Konan Hara]{Konan Hara}
+\institute[Arizona]{University of Arizona}
 \date{\today}
 \begin{document}
 
@@ -64,38 +113,37 @@
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Introduction}
-	Survival analysis can deal with
+	\frametitle{Pros and Cons}
+	\begin{itemize}
+	\item Survival analysis can deal with
 	\begin{itemize}
 	\item Censoring
 	\item Time-dependent covariates
 	\item Competing risks
 
 	\end{itemize}
-	\end{frame}
-
-	\begin{frame}
-	\frametitle{Introduction}
-	However, the costs are that
+	\item However, the costs are that
 	\begin{itemize}
 	\item Assumptions for causal inference are strong
 	\item Models are complicated and not so intuitive
 	\item Machine learning methods are difficult to apply
 
 	\end{itemize}
+	\end{itemize}
+	
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Topics}
 	\centering{
-	\includegraphics[width=11cm]{figures/Wang_et_al_Fig3_1.png}
+	\includegraphics[width=11cm]{fig/Wang_et_al_Fig3_1.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Topics}
 	\centering{
-	\includegraphics[width=11cm]{figures/Wang_et_al_Fig3_2.png}
+	\includegraphics[width=11cm]{fig/Wang_et_al_Fig3_2.png}
 	}
 	\end{frame}
 
@@ -104,7 +152,7 @@
 	\begin{frame}
 	\frametitle{Survival Data and Censoring}
 	\centering{
-	\includegraphics[width=9cm]{figures/Wang_et_al_Fig1.png}\\
+	\includegraphics[width=9cm]{fig/Wang_et_al_Fig1.png}\\
 	X marks: event occurrence\\
 	Red dots: censored
 	}
@@ -148,7 +196,7 @@
 	\begin{frame}
 	\frametitle{Survival and Hazard Function}
 	\centering{
-	\includegraphics[width=11cm]{figures/Wang_et_al_Fig2.png}
+	\includegraphics[width=10.5cm]{fig/Wang_et_al_Fig2.png}
 	}
 	\end{frame}
 
@@ -254,7 +302,7 @@
 	\end{frame}
 
 	\begin{frame}
-	\frametitle{Kaplan-Meier Curve}
+	\frametitle{Kaplan-Meier Curve---Covariates}
 	\begin{itemize}
 	\item The effect of $X$ can be quantified by stratification.
 	\item Time-dependent covariates $X(t)$ can be incorporated as well.
@@ -267,7 +315,7 @@
 	\begin{frame}
 	\frametitle{Kaplan-Meier Curve}
 	\centering{
-	\includegraphics[width=8cm]{figures/km.png}
+	\includegraphics[width=7.5cm]{fig/km.png}
 	}
 	\end{frame}
 
@@ -293,14 +341,6 @@
 	\begin{itemize}
 	\item Semiparametric: baseline hazard function $h_0(t)$ can be left unspecified in the estimation of $\beta$
 	\item $h_0(t)$ can be estimated nonparametrically
-
-	\end{itemize}
-
-	\end{frame}
-
-	\begin{frame}
-	\frametitle{Cox Model}
-	\begin{itemize}
 	\item Likelihood of event time $T_i$:
 	\begin{eqnarray*}
 	\frac{h(T_i,X_i) \Delta t}{\sum_{j \in R(T_i)} h(T_i,X_j) \Delta t}
@@ -330,7 +370,7 @@
 	\begin{frame}
 	\frametitle{Time-Dependent Cox Model}
 	\centering{
-	\includegraphics[width=8cm]{figures/tdcox.png}
+	\includegraphics[width=7.5cm]{fig/tdcox.png}
 	}
 	\end{frame}
 
@@ -339,14 +379,6 @@
 	\begin{itemize}
 	\item Parametric baseline hazard function, i.e, $h_0(t; \lambda)$
 	\item Hazard function can be estimated more efficiently than semiparametric models
-
-	\end{itemize}
-
-	\end{frame}
-
-	\begin{frame}
-	\frametitle{Parametric Hazard Function}
-	\begin{itemize}
 	\item Hazard function:
 	\begin{eqnarray*}
 	h(t,X_i) = h_0(t; \lambda) \exp(X_i \beta)
@@ -363,14 +395,14 @@
 	\begin{frame}
 	\frametitle{Parametric Hazard Function}
 	\centering{
-	\includegraphics[width=11.8cm]{figures/Wang_et_al_Tab4.png}
+	\includegraphics[width=\textwidth]{fig/Wang_et_al_Tab4.png}
 	}
 	\end{frame}
 	
 	\begin{frame}
 	\frametitle{Exponential distribution}
 	\centering{
-	\includegraphics[width=8cm]{figures/exp.png}
+	\includegraphics[width=7.5cm]{fig/exp.png}
 	}
 	\end{frame}
 
@@ -412,7 +444,7 @@
 	\begin{frame}
 	\frametitle{Survival Trees}
 	\centering{
-	\includegraphics[width=8cm]{figures/Fu_et_al_Fig3_L.png}
+	\includegraphics[width=7.5cm]{fig/Fu_et_al_Fig3_L.png}
 	}
 	\end{frame}
 
@@ -426,14 +458,6 @@
 	\begin{eqnarray*}
 	c = \Pr(\hat{y_i} > \hat{y_j} | y_i > y_j)
 	\end{eqnarray*}
-
-	\end{itemize}
-
-	\end{frame}
-
-	\begin{frame}
-	\frametitle{C-index}
-	\begin{itemize}
 	\item Estimator of C-index for Cox models:
 	\begin{eqnarray*}
 	\hat{c} = \frac{1}{num} \sum_{i:\delta_i = 1} \sum_{j:y_i < y_j} I(X_i \hat{\beta} > X_j \hat{\beta})
@@ -449,7 +473,7 @@
 	\frametitle{C-index}
 	\centering{
 	$y_1 < y_2 < y_3 < y_4 < y_5$\\
-	\includegraphics[width=8cm]{figures/Wang_et_al_Fig4b.png}\\
+	\includegraphics[width=8cm]{fig/Wang_et_al_Fig4b.png}\\
 	Black: event observed\\
 	Red: censored\\
 	Edges: possible ranking comparisons
@@ -622,7 +646,7 @@
 	\begin{frame}
 	\frametitle{Continuous-Time Markov Model}
 	\centering{
-	\includegraphics[width=11.8cm]{figures/markov/markov-crop.pdf}
+	\includegraphics[width=\textwidth]{fig/markov/markov-crop.pdf}
 	}
 	\end{frame}
 
@@ -631,7 +655,7 @@
 	\begin{frame}
 	\frametitle{Kaito et al. (2020, Blood Adv.)}
 	\centering{
-	\includegraphics[width=12cm]{figures/Kaito_et_al_title.png}
+	\includegraphics[width=\textwidth]{fig/Kaito_et_al_title.png}
 	}
 	\end{frame}
 
@@ -677,7 +701,7 @@
 	\begin{frame}
 	\frametitle{Heterogeneous Treatment Effect}
 	\centering{
-	\includegraphics[width=8cm]{figures/htecox.png}
+	\includegraphics[width=7.5cm]{fig/htecox.png}
 	}
 	\end{frame}
 
@@ -719,35 +743,35 @@
 	\begin{frame}
 	\frametitle{Scoring model for CMV reactivation}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig1B.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig1B.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Impact of CMV reactivation on NRM}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig1A.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig1A.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Impact of CMV reactivation on NRM}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig2A.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig2A.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Impact of CMV reactivation on NRM}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig2B.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig2B.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Impact of CMV reactivation on NRM}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig2C.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig2C.png}
 	}
 	\end{frame}
 
@@ -781,21 +805,21 @@
 	\begin{frame}
 	\frametitle{Heterogeneous impact}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig3A.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig3A.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Heterogeneous impact}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Kaito_et_al_Fig3B.png}
+	\includegraphics[height=7.5cm]{fig/Kaito_et_al_Fig3B.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Taguchi et al. (2020, Cancers)}
 	\centering{
-	\includegraphics[width=12cm]{figures/Taguchi_et_al_title.png}
+	\includegraphics[width=\textwidth]{fig/Taguchi_et_al_title.png}
 	}
 	\end{frame}
 
@@ -813,21 +837,21 @@
 	\begin{frame}
 	\frametitle{Samples}
 	\centering{
-	\includegraphics[height=7.5cm]{figures/Taguchi_et_al_Fig3.png}
+	\includegraphics[height=7.5cm]{fig/Taguchi_et_al_Fig3.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Summary of transitions}
 	\centering{
-	\includegraphics[width=12cm]{figures/Taguchi_et_al_Tab2.png}
+	\includegraphics[width=14cm]{fig/Taguchi_et_al_Tab2.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Continuous-time Markov model}
 	\centering{
-	\includegraphics[width=11cm]{figures/Taguchi_et_al_Fig2.pdf}
+	\includegraphics[width=\textwidth]{fig/Taguchi_et_al_Fig2.pdf}
 	}
 	\end{frame}
 
@@ -848,14 +872,14 @@
 	\begin{frame}
 	\frametitle{Predicted 2-year transition probabilities}
 	\centering{
-	\includegraphics[width=12cm]{figures/Taguchi_et_al_Tab3.png}
+	\includegraphics[width=15cm]{fig/Taguchi_et_al_Tab3.png}
 	}
 	\end{frame}
 
 	\begin{frame}
 	\frametitle{Observed and simulated prevalence}
 	\centering{
-	\includegraphics[width=12cm]{figures/Taguchi_et_al_Fig1.png}
+	\includegraphics[width=13cm]{fig/Taguchi_et_al_Fig1.png}
 	}
 	\end{frame}
 
