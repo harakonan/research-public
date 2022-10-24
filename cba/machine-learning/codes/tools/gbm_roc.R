@@ -73,7 +73,7 @@ gbm_roc <- function(tr, te, family = "binomial", method, eta, subsample, max_dep
 	model <- xgb.train(params = params
 				   , data = tr
 				   , nrounds = best_iteration)
-	model_predict <- data.table(predict(model, newdata = va))
+	model_predict <- data.table(predict(model, newdata = te))
 	setnames(model_predict,"predict")
 	return(c(output_roc(getinfo(te, name = "label"), model_predict$predict, family, method)
 		, list(cvauc_alpha = cvauc_alpha, best_iteration = best_iteration, alpha = alpha, model = model)))

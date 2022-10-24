@@ -72,7 +72,7 @@ da_roc <- function(tr, te, y, x, family = "binomial", method, degree = NULL, can
                                             , method = gen.ridge
                                             , lambda = lambda)
     }
-    model_predict <- data.table(predict(model, newdata = va[, -c(y), with = FALSE], type = "posterior")[,2])
+    model_predict <- data.table(predict(model, newdata = te[, -c(y), with = FALSE], type = "posterior")[,2])
     setnames(model_predict,"predict")
     return(c(output_roc(unlist(va[, y, with = FALSE]), model_predict$predict, family, method)
            , list(cvauc_lambda = cvauc_lambda, lambda = lambda, model = model)))

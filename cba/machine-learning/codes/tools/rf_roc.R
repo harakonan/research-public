@@ -36,9 +36,9 @@ rf_roc <- function(tr, va, te, y, family = "binomial", method = "rf", can_mtry, 
 		  					  , num.trees = num.trees
 		  					  , min.node.size = min.node.size
 		  					  )
-		  model_predict <- data.table(predict(model_val, data = va[, -c(y), with = FALSE])$predictions[,2])
+		  model_predict <- data.table(predict(model_val, data = te[, -c(y), with = FALSE])$predictions[,2])
 		  setnames(model_predict,"predict")
-		  auc <- output_auc(unlist(va[, y, with = FALSE]), model_predict$predict)$aucmed
+		  auc <- output_auc(unlist(te[, y, with = FALSE]), model_predict$predict)$aucmed
 		  data.table(valauc = auc, mtry = i)
 		}
 		mtry <- valauc_mtry[valauc == max(valauc)]$mtry
@@ -53,8 +53,8 @@ rf_roc <- function(tr, va, te, y, family = "binomial", method = "rf", can_mtry, 
 				  , num.trees = num.trees
 				  , min.node.size = min.node.size
 				  )
-	model_predict <- data.table(predict(model, va[, -c(y), with = FALSE])$predictions[,2])
+	model_predict <- data.table(predict(model, te[, -c(y), with = FALSE])$predictions[,2])
 	setnames(model_predict,"predict")
-	return(c(output_roc(unlist(va[, y, with = FALSE]), model_predict$predict, family, method)
+	return(c(output_roc(unlist(te[, y, with = FALSE]), model_predict$predict, family, method)
 		   , list(valauc_mtry = valauc_mtry, mtry = mtry, model = model)))
 }
