@@ -16,8 +16,8 @@
 
 # <<include=FALSE>>=
 # Path to working directories
-pathtoint <- "~/Workspace/research-private/cin-markov/data/intermediate/"
-pathtooutput <- "~/Workspace/research-private/cin-markov/output/"
+pathtoint <- "~/Workspace/storage/20200131AyumiTaguchi/data/intermediate/"
+pathtooutput <- "~/Workspace/research-public/cin-markov/output/"
 
 # loading packages
 library(data.table)
@@ -55,6 +55,8 @@ for (type in hpv_type){
     model_markov <- msm(state ~ years, subject = id, data = data_markov[eval(parse(text = type)) == 1],
                     qmatrix = qmatrix)
     pmatrix <- pmatrix.msm(model_markov, t = 2, ci="normal")
+    # # 1 year version upon request at 20230608 
+    # pmatrix <- pmatrix.msm(model_markov, t = 1, ci="normal")
 
     # start from normal
     Normal <- paste0(tidy_num(pmatrix$estimates[1,1])," (",tidy_num(pmatrix$L[1,1]),"-",tidy_num(pmatrix$U[1,1]),")")
@@ -84,6 +86,8 @@ markov_result[["CIN1"]] <- rbindlist(markov_result_cin1)
 markov_result[["CIN2"]] <- rbindlist(markov_result_cin2)
 
 fwrite(rbindlist(markov_result), paste0(pathtooutput,"cin-markov05_model1.csv"))
+# # 1 year version upon request at 20230608
+# fwrite(rbindlist(markov_result), paste0(pathtooutput,"cin-markov05_model1_1yr.csv"))
 
 # @
 
