@@ -1,5 +1,8 @@
 # !bin/zsh
 
+# remove lines for month
+sed -i '' '/^month = {/d' *.bib
+
 # create .bbl
 bibtex eco
 bibtex medpri
