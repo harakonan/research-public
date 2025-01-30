@@ -1,8 +1,7 @@
 # research-public
-Research manuscripts and codes which are publicly available.
+Research manuscripts and publicly available codes.
 
-I am a Ph.D. student at the Department of Economics, University of Arizona. I have earned M.D. and Ph.D. in Medicine (Public Health Major) at The University of Tokyo.
-[CV](https://github.com/harakonan/research-public/blob/master/CV/CV_KH.pdf)
+I am a Postdoctoral Scholar at the University of Chicago Harris School of Public Policy and the Energy Policy Institute at the University of Chicago (EPIC). [[CV]](https://github.com/harakonan/research-public/blob/master/CV/CV_KH.pdf)
 
 ## Contents
 
