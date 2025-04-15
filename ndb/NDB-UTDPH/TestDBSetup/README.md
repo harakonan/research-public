@@ -57,11 +57,11 @@
 でStable channelをインストールする。
 - Docker -> Preferences -> AdvancedでMemoryを8.0GBに変更する。  
 以下のようになる（CPUの数は環境によって異なる）。
-<img src="https://github.com/harakonan/images/blob/master/docker-memory-setting.png" width="500">  
+<img src="https://github.com/harakonan/research-public/blob/master/ndb/NDB-UTDPH/TestDBSetup/image/docker-memory-setting.png" width="500">  
 
 - Docker -> Preferences -> DiskでDisk image sizeを96.0GBに変更する。  
 以下のようになる。
-<img src="https://github.com/harakonan/images/blob/master/docker-disk-size-setting.png" width="500">
+<img src="https://github.com/harakonan/research-public/blob/master/ndb/NDB-UTDPH/TestDBSetup/image/docker-disk-size-setting.png" width="500">
 
 ## 2. OracleDBのdocker-imageのbuild
 ### Reference
